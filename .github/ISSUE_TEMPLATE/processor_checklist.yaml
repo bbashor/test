@@ -22,15 +22,6 @@ body:
         The following steps are to be performed with the processor powered off.
 
   - type: checkboxes
-    id: bay_doors
-    attributes:
-      label: Bay Doors
-      description: Check the ethernet ports by plugging in an ethernet cable into the nic and perform a basic ping test.
-      options:
-        - label: left door
-        - label: right door
-
-  - type: checkboxes
     id: internal_components
     attributes:
       label: Clean Internal Components
