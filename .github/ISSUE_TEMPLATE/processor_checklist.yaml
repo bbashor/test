@@ -7,13 +7,11 @@ assignees:
   - bbashor
 
 body:
-  - type: textaera
+  - type: textarea
     id: before_pictures
     attributes:
       label: Arrival Photos
       description: take photos of the processor, include a few with the top cover removed.  Also, take a picture with the disk bays open to show the disk.  This is to provide evidence when Dan said you had the disk and you can't remember if you did or not.
-      options:
-        - label: I did this and posted them in a comment below.
 
   - type: checkboxes
     id: usb_front
