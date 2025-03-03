@@ -7,12 +7,24 @@ assignees:
   - bbashor
 
 body:
-  - type: markdown
-    attributes:
-      value: |
-        ## PDR    #: 
 
-        ## Serial #: 
+  - type: input
+    id: pdr_number
+    attributes:
+      label: PDR Number
+      description: What PDR is this?
+      placeholder: PDR000AF
+    validations:
+      required: true
+
+  - type: input
+    id: serial_number
+    attributes:
+      label: Serial Number
+      description: What is the processor serial number?
+      placeholder: xxxxxxx
+    validations:
+      required: true
 
   - type: textarea
     id: arrival_condition
