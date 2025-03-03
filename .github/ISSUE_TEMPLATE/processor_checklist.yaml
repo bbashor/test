@@ -11,38 +11,136 @@ body:
     id: before_pictures
     attributes:
       label: Arrival Photos
-      description: take photos of the processor, include a few with the top cover removed.  Also, take a picture with the disk bays open to show the disk.  This is to provide evidence when Dan said you had the disk and you can't remember if you did or not.
+      description: Take photos of the processor, include a few with the top cover removed.  Also, take a picture with the disk bays open to show the disk.  This is to provide evidence when Dan said you had the disk and you can't remember if you did or not.
       placeholder: attach photos here.
+  
   - type: markdown
-    id: something
     attributes:
       value: |
-        # does this work?
-        is it like this?
-        - l1
-        - l2
-      
-      
+        ## Power Off
+
+        The following steps are to be performed with the processor powered off.
 
   - type: checkboxes
-    id: usb_front
+    id: bay_doors
     attributes:
-      label: Front USB Ports
-      description: Check the front USB ports by plugging in a mouse or keyboard and performing a quick function test.
+      label: Bay Doors
+      description: Check the ethernet ports by plugging in an ethernet cable into the nic and perform a basic ping test.
       options:
-        - label: front usb (top)
-        - label: front usb (bottom)
+        - label: left door
+        - label: right door
 
   - type: checkboxes
-    id: usb_back
+    id: internal_components
     attributes:
-      label: Back USB Ports
-      description: Check the back USB ports by plugging in a mouse or keyboard and performing a quick function test.
+      label: Clean Internal Components
+      description: Loose cards: Remove, run pencil eraser over contacts and reinstall cards on the
       options:
-        - label: back upper right usb
-        - label: back upper left usb
-        - label: back lower right usb
-        - label: back lower left usb
+        - label: Wash front air filters
+        - label: Video Card
+        - label: Network Card(s)
+        - label: Memory DIMM(s)
+
+  - type: checkboxes
+    id: reset_connections
+    attributes:
+      label: Internal Connection(s) reset
+      description: Remove and reinsert the following connectors.
+      options:
+        - label: Main motherboard buss
+        - label: FAN1 CPU fan
+        - label: FAN2 external fan
+        - label: FAN5 external fan
+        - label: 4PIN
+        - label: 8PIN
+        - label: DVD power and SATA
+        - label: Bay 0 power and SATA
+        - label: Bay 1 power and SATA
+        - label: Back fans
+        - label: Front fans
+        - label: CPU fans
+
+  - type: checkboxes
+    id: fans
+    attributes:
+      label: Check Fans.
+      description: Check fans and any other moving parts.
+      options:
+        - label: Back fans
+        - label: Front fans
+        - label: CPU fan(s)
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Power On
+
+        The following steps are to be performed with the processor powered on.
+
+  - type: checkboxes
+    id: bios
+    attributes:
+      label: BIOS
+      description: Check the ethernet ports by plugging in an ethernet cable into the nic and perform a basic ping test.
+      options:
+        - label: bios password is set
+        - label: secure boot is disabled
+        - label: the first boot device is the sda ssd, have the second boot device be the cdrom.  disable all other boot devices
+        - label: date / time is correct
+        - label: quite boot enabled
+        - label: restore on ac power loss is enabled
+        - label: boot mode select is set to legacy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  - type: checkboxes
+    id: usb
+    attributes:
+      label: USB Ports
+      description: Check the front and USB ports by plugging in a mouse or keyboard and performing a quick function test.
+      options:
+        - label: front usb
+        - label: back usb
 
   - type: checkboxes
     id: nics
@@ -69,33 +167,10 @@ body:
     id: cdrom
     attributes:
       label: CD ROM
-      description: ensure the cdrom works.  this can be accomplished by simply booting of any rescue cd.
+      description: ensure the cdrom works.  this can be accomplished by simply booting of any rescue cd and burning a DVD.
       options:
-        - label: left door
-        - label: right door
-
-  - type: checkboxes
-    id: bay_doors
-    attributes:
-      label: Bay Doors
-      description: Check the ethernet ports by plugging in an ethernet cable into the nic and perform a basic ping test.
-      options:
-        - label: left door
-        - label: right door
-
-  - type: checkboxes
-    id: bios
-    attributes:
-      label: BIOS
-      description: Check the ethernet ports by plugging in an ethernet cable into the nic and perform a basic ping test.
-      options:
-        - label: bios password is set
-        - label: secure boot is disabled
-        - label: the first boot device is the sda ssd, have the second boot device be the cdrom.  disable all other boot devices
-        - label: date / time is correct
-        - label: quite boot enabled
-        - label: restore on ac power loss is enabled
-        - label: boot mode select is set to legacy
+        - label: boot from cdrom 
+        - label: burn dvd
 
   - type: textarea
     id: lshw
