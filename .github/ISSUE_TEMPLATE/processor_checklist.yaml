@@ -16,7 +16,11 @@ body:
   - type: markdown
     id: something
     attributes:
-      value: "is it like this?"
+      value: |
+        # does this work?
+        is it like this?
+        - l1
+        - l2
       
       
 
