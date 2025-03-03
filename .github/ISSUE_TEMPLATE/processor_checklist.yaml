@@ -9,6 +9,8 @@ assignees:
 body:
   - type: markdown
     attributes:
+      label: PDR Information
+      description: Please note the PDR number and Serial number
       value: |
         ## PDR    #: 
 
