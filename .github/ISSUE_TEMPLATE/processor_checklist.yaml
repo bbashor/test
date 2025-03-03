@@ -7,6 +7,13 @@ assignees:
   - bbashor
 
 body:
+  - type: markdown
+    attributes:
+      value: |
+        ## PDR    #: 
+
+        ## Serial #: 
+
   - type: textarea
     id: before_pictures
     attributes:
