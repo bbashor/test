@@ -22,17 +22,6 @@ body:
         The following steps are to be performed with the processor powered off.
 
   - type: checkboxes
-    id: internal_components
-    attributes:
-      label: Clean Internal Components
-      description: Loose cards: Remove, run pencil eraser over contacts and reinstall cards on the
-      options:
-        - label: Wash front air filters
-        - label: Video Card
-        - label: Network Card(s)
-        - label: Memory DIMM(s)
-
-  - type: checkboxes
     id: reset_connections
     attributes:
       label: Internal Connection(s) reset
