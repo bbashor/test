@@ -13,6 +13,14 @@ body:
       label: Arrival Photos
       description: take photos of the processor, include a few with the top cover removed.  Also, take a picture with the disk bays open to show the disk.  This is to provide evidence when Dan said you had the disk and you can't remember if you did or not.
       placeholder: attach photos here.
+  - type: markdown
+    id: something
+    addtributes:
+      values: |
+        # h1
+      
+      
+
   - type: checkboxes
     id: usb_front
     attributes:
