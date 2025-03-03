@@ -17,7 +17,6 @@ body:
   - type: textarea
     id: arrival_condition
     attributes:
-      value: |
         label: External damage or tampering
         description: Note and physical damage to the processor
         placeholder: Normal wear and tear.
