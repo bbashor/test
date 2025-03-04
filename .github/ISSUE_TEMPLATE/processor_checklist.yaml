@@ -125,16 +125,6 @@ body:
         The following steps are to be performed with the processor powered on.
 
   - type: checkboxes
-    id: fans
-    attributes:
-      label: Fans
-      description: Check all moving parts
-      options:
-        - label:  main power supply fan
-        - label:  external fan(s)
-        - label:  cpu fan
-
-  - type: checkboxes
     id: usb_front
     attributes:
       label: Front USB Ports
