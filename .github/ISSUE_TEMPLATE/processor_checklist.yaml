@@ -76,43 +76,47 @@ body:
   
   - type: checkboxes
     id: bios_batt
-    label: Replace Processor Server BIOS battery
-    description: The battery type for the standard PDR is `CR3032`.  Changing the bios battery with the poweroff will clear the BIOS settings.  Procedures to set the BIOS are below.
-    options:
-      - label: replace the bios battery.  this will clear the bios settings
-      - label: place a sticker with the date on new battery
+    attributes:
+      label: Replace Processor Server BIOS battery
+      description: The battery type for the standard PDR is `CR3032`.  Changing the bios battery with the poweroff will clear the BIOS settings.  Procedures to set the BIOS are below.
+      options:
+        - label: replace the bios battery.  this will clear the bios settings
+        - label: place a sticker with the date on new battery
   
   - type: checkboxes
     id: internal_components
-    label: Clean internal components and vents/filters with compressed air.
-    description: Loose cards Remove, run pencil eraser over contacts and reinstall cards on the 
-    options:
-      - label: Wash front air filters
-      - label: Video Card
-      - label: Network Card(s)
-      - label: Memory Card(s)
+    attributes:
+      label: Clean internal components and vents/filters with compressed air.
+      description: Loose cards Remove, run pencil eraser over contacts and reinstall cards on the 
+      options:
+        - label: Wash front air filters
+        - label: Video Card
+        - label: Network Card(s)
+        - label: Memory Card(s)
   
   - type: checkboxes
     id: internal_components_reset
-    label: Internal Connections (reset all)
-    description: Remove and reinsert the following connectors
-    options:
-      - label: Main motherboard buss
-      - label: FAN1 CPU fan
-      - label: FAN2 external fan
-      - label: FAN5 external fan
-      - label: 4PIN
-      - label: 8PIN
+    attributes:
+      label: Internal Connections (reset all)
+      description: Remove and reinsert the following connectors
+      options:
+        - label: Main motherboard buss
+        - label: FAN1 CPU fan
+        - label: FAN2 external fan
+        - label: FAN5 external fan
+        - label: 4PIN
+        - label: 8PIN
   
   - type: checkboxes
     id: dvd_drive
-    label: Drive Connections
-    description: Inspect and re-glue if necessary internal drive cables as needed
-    options:
-      - label: DVD power and SATA
-      - label: Bay 0 power and SATA
-      - label: Bay 1 power and SATA
-  
+    attributes:
+      label: Drive Connections
+      description: Inspect and re-glue if necessary internal drive cables as needed
+      options:
+        - label: DVD power and SATA
+        - label: Bay 0 power and SATA
+        - label: Bay 1 power and SATA
+    
   - type: markdown
     attributes:
       value: |
@@ -122,12 +126,13 @@ body:
 
   - type: checkboxes
     id: fans
-    label: Fans
-    description: Check all moving parts
-    options:
-      - label:  main power supply fan
-      - label:  external fan(s)
-      - label:  cpu fan
+    attributes:
+      label: Fans
+      description: Check all moving parts
+      options:
+        - label:  main power supply fan
+        - label:  external fan(s)
+        - label:  cpu fan
 
   - type: checkboxes
     id: usb_front
