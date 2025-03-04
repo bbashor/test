@@ -7,7 +7,6 @@ assignees:
   - bbashor
 
 body:
-
   - type: input
     id: pdr_number
     attributes:
@@ -74,4 +73,158 @@ body:
       options:
         - label: left door
         - label: right door
+  
+  - type: checkboxes
+    id: bios_batt
+    label: Replace Processor Server BIOS battery
+    description: The battery type for the standard PDR is `CR3032`.  Changing the bios battery with the poweroff will clear the BIOS settings.  Procedures to set the BIOS are below.
+    options:
+      - label: replace the bios battery.  this will clear the bios settings
+      - label: place a sticker with the date on new battery
+  
+  - type: checkboxes
+    id: internal_components
+    label: Clean internal components and vents/filters with compressed air.
+    description: Loose cards: Remove, run pencil eraser over contacts and reinstall cards on the 
+    options:
+      - label: Wash front air filters
+      - label: Video Card
+      - label: Network Card(s)
+      - label: Memory Card(s)
+  
+  - type: checkboxes
+    id: internal_components_reset
+    label: Internal Connections (reset all)
+    description: Remove and reinsert the following connectors
+    options:
+      - label: Main motherboard buss
+      - label: FAN1 CPU fan
+      - label: FAN2 external fan
+      - label: FAN5 external fan
+      - label: 4PIN
+      - label: 8PIN
+  
+  - type: checkboxes
+    id: dvd_drive
+    label: Drive Connections
+    description: Inspect and re-glue if necessary internal drive cables as needed
+    options:
+      - label: DVD power and SATA
+      - label: Bay 0 power and SATA
+      - label: Bay 1 power and SATA
+  
+  - type: markdown
+    attributes:
+      value: |
+        ## Power ON
 
+        The following steps are to be performed with the processor powered on.
+
+  - type: checkboxes
+    id: fans
+    label: Fans
+    description: Check all moving parts
+    options:
+      - label:  main power supply fan
+      - label:  external fan(s)
+      - label:  cpu fan
+
+  - type: checkboxes
+    id: usb_front
+    attributes:
+      label: Front USB Ports
+      description: Check the front USB ports by plugging in a mouse or keyboard and performing a quick function test.
+      options:
+        - label: front usb (top)
+        - label: front usb (bottom)
+
+  - type: checkboxes
+    id: usb_back
+    attributes:
+      label: Back USB Ports
+      description: Check the back USB ports by plugging in a mouse or keyboard and performing a quick function test.
+      options:
+        - label: back upper right usb
+        - label: back upper left usb
+        - label: back lower right usb
+        - label: back lower left usb
+
+  - type: checkboxes
+    id: nics
+    attributes:
+      label: Ethernet Ports
+      description: Check the ethernet ports by plugging in an ethernet cable into the nic and perform a basic ping test.
+      options:
+        - label: eth0
+        - label: eth1
+        - label: eht2
+        - label: eth3
+
+  - type: checkboxes
+    id: fans
+    attributes:
+      label: Internal Fans
+      description: Check and ensure that all fans are functioning properly.
+      options:
+        - label: front fans
+        - label: back fans
+        - label: cpu fan
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  - type: checkboxes
+    id: cdrom
+    attributes:
+      label: CD ROM
+      description: ensure the cdrom works.  this can be accomplished by simply booting of any rescue cd.
+      options:
+        - label: left door
+        - label: right door
+
+  - type: checkboxes
+    id: bay_doors
+    attributes:
+      label: Bay Doors
+      description: Check the ethernet ports by plugging in an ethernet cable into the nic and perform a basic ping test.
+      options:
+        - label: left door
+        - label: right door
+
+  - type: checkboxes
+    id: bios
+    attributes:
+      label: BIOS
+      description: Check the ethernet ports by plugging in an ethernet cable into the nic and perform a basic ping test.
+      options:
+        - label: bios password is set
+        - label: secure boot is disabled
+        - label: the first boot device is the sda ssd, have the second boot device be the cdrom.  disable all other boot devices
+        - label: date / time is correct
+        - label: quite boot enabled
+        - label: restore on ac power loss is enabled
+        - label: boot mode select is set to legacy
+
+  - type: textarea
+    id: lshw
+    attributes:
+      label: Hardware Information
+      description: run `lshw` and past the output here.
+
+  - type: checkboxes
+    id: after_pictures
+    attributes:
+      label: Departure Photos
+      description: take photos of the processor. Say goodby and wish it well.
+      options:
+        - label: I did this and posted them in a comment below.
