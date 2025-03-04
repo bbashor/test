@@ -85,7 +85,7 @@ body:
   - type: checkboxes
     id: internal_components
     label: Clean internal components and vents/filters with compressed air.
-    description: Loose cards: Remove, run pencil eraser over contacts and reinstall cards on the 
+    description: Loose cards Remove, run pencil eraser over contacts and reinstall cards on the 
     options:
       - label: Wash front air filters
       - label: Video Card
