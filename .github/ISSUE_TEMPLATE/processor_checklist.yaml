@@ -175,33 +175,11 @@ body:
         - label: back fans
         - label: cpu fan
 
-
-
-
-
-
-
-
-
-
-
-
-
-
   - type: checkboxes
     id: cdrom
     attributes:
       label: CD ROM
       description: ensure the cdrom works.  this can be accomplished by simply booting of any rescue cd.
-      options:
-        - label: left door
-        - label: right door
-
-  - type: checkboxes
-    id: bay_doors
-    attributes:
-      label: Bay Doors
-      description: Check the ethernet ports by plugging in an ethernet cable into the nic and perform a basic ping test.
       options:
         - label: left door
         - label: right door
